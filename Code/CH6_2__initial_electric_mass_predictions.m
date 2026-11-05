@@ -1,13 +1,16 @@
 clear all; close all; clc;
 
 % Input
-R       = 60;       % Range [km]
-E       = 180;      % Mass energy density [Wh/kg]               % TODO: Research battery types
-eta_tot = 0.70;     % Total power system efficiency [-]
+R       = 120;      % Range [km]
+E       = 313.59;   % Mass energy density [Wh/kg]               
+                    % TARBG3333K18S10X from:
+                    % https://www.grepow.com/semi-solid-state-battery/330wh-kg-series-high-energy-density-battery-pack.html
+
+eta_tot = 0.62;     % Total power system efficiency [-] (Gudmundsson uses 0.7 in example 6-3)
 mp      = 200;      % Payload [kg]
 
 g = 9.807;
-LDc_vec = 15:2.5:40;              % L/D (during cruise) to test
+LDc_vec = 12:1.5:24;              % L/D (during cruise) to test
 f_e_vec   = 0.40:0.05:0.70;     % Empty mass fraction me/m0 to test (empty mass without battery)
 
 m0_tab   = NaN(length(f_e_vec), length(LDc_vec));
@@ -30,10 +33,10 @@ for i = 1:length(f_e_vec)
 end
 
 % Result
-disp('Gross mass m0 [kg]');
+disp('Gross mass m0 [kg] (assuming continously variable battery mass)');
 disp(array2table(round(m0_tab,1), 'VariableNames', ...
     strcat('LD_', string(LDc_vec)), 'RowNames', strcat('me/m0=', string(f_e_vec))));
 
-fprintf('\nBattery mass mbatt [kg] for range R = %g km (no reserve)\n', R);
+fprintf('\nBattery mass mbatt [kg] (continously variable) for range R = %g km (no reserve)\n', R);
 disp(array2table(round(mbatt_tab,1), 'VariableNames', ...
     strcat('LD_', string(LDc_vec)), 'RowNames', strcat('me/m0=', string(f_e_vec))));
