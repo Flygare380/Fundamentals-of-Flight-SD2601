@@ -18,7 +18,7 @@ E_specified = 313.59;        % Manufacturer-specified specific energy [Wh/kg]
 R_planned = 120;             % Planned total flight distance, including return [km]
 R_margin  = 1.1;             % Flight-distance margin factor [-]
 E_use     = 0.85;            % DoD, depth of discharge [-]
-eta_tot   = 0.62;            % Total system efficiency [-] (Gudmundsson uses 0.7 in example 6-3)
+eta_tot   = 0.70;            % Total system efficiency [-]
 mp        = 200;             % Payload mass, retained throughout  mission [kg]
 g         = 9.807;           % [m/s^2]
 
@@ -77,6 +77,12 @@ disp('Take-off weight m0 [kg] (using integer number of battery packs):');
 disp(array2table(round(m0_tab,1), 'VariableNames', ...
     strcat('LD_', string(LDc_vec)), ...
     'RowNames', strcat('me_m0_', string(f_e_vec))));
+
+fprintf('\nBattery mass mbatt [kg] (%s, integer number of packs):\n', batt_name);
+disp(array2table(round(nbatt_tab * m_pack, 1), 'VariableNames', ...
+    strcat('LD_', string(LDc_vec)), ...
+    'RowNames', strcat('me_m0_', string(f_e_vec))));
+
 
 fprintf('\nNumber of battery packs (%s) for design range R = %g km:\n', batt_name, R);
 disp(array2table(nbatt_tab, 'VariableNames', ...
