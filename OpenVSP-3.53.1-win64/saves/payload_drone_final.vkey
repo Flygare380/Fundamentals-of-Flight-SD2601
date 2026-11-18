@@ -1,0 +1,27 @@
+# VSPGEOM v3 Tag Key File
+D:/Dokument/A KTH kurser/GitHub/Fundamentals-of-Flight-SD2601/OpenVSP-3.53.1-win64/saves/payload_drone_final.vspgeom
+9
+
+# part#,geom#,surf#,gname,gid,thick,plate,copy#,geomcopy#
+1,2,0,payload_pod_S,GOZLKPCWVW,1,0,1,3
+2,0,0,wing_C,NVXDVVCVJB,0,3,1,1
+3,0,1,wing_C,NVXDVVCVJB,0,3,2,1
+4,1,0,motor_pod_left_S,HVEVKAGENN,1,0,1,2
+5,5,0,motor_pod_right_S,ECWXHXTYUQ,1,0,1,6
+6,3,0,HT_C,GNFYAGWJRX,0,3,1,4
+7,3,1,HT_C,GNFYAGWJRX,0,3,2,4
+8,4,0,VT_C,GEBYOYKSCO,0,3,1,5
+9,4,1,VT_C,GEBYOYKSCO,0,3,2,5
+
+9
+
+# tag#,part#,ssname1,ssname2,...,ssid1,ssid2,...
+1,1
+2,2
+3,3
+4,4
+5,5
+6,6
+7,7
+8,8
+9,9

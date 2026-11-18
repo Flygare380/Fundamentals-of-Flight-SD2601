@@ -1,0 +1,21 @@
+# VSP Tag Key File
+D:/Dokument/A KTH kurser/GitHub/Fundamentals-of-Flight-SD2601/OpenVSP-3.53.1-win64/saves/payload_drone_final.tkey
+17
+
+1,FuselageGeom_S_Surf0
+2,FuselageGeom_S_Surf0
+3,FuselageGeom_S_Surf0
+4,WingGeom_S_Surf0
+5,WingGeom_S_Surf1
+6,WingGeom_S_Surf0
+7,WingGeom_S_Surf1
+8,WingGeom_S_Surf0
+9,WingGeom_S_Surf1
+10,PropGeom_S_Surf0
+11,PropGeom_S_Surf1
+12,PropGeom_S_Surf2
+13,PropGeom_S_Surf3
+14,PropGeom_S_Surf0
+15,PropGeom_S_Surf1
+16,PropGeom_S_Surf2
+17,PropGeom_S_Surf3
